@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="mainLayout" 
+minHeight="360.0" minWidth="640.0" 
+prefHeight="768.0" prefWidth="1366.0" 
+stylesheets="@../styles/global.css" 
+xmlns="http://javafx.com/javafx/23.0.1"
+xmlns:fx="http://javafx.com/fxml/1" 
+fx:controller="com.dnbsammie.controllers.MainController"> 
+
+<left>
+        <VBox fx:id="sidebar" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="sidebar">
+         <HBox maxWidth="1.7976931348623157E308" prefHeight="50.0">
+            <children>
+               <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/logo.png" />
+                  </image>
+                  <viewport>
+                     <Rectangle2D />
+                  </viewport>
+               </ImageView>
+               <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Ordo" HBox.hgrow="ALWAYS">
+                  <HBox.margin>
+                     <Insets left="10.0" />
+                  </HBox.margin>
+               </Button>
+            </children>
+         </HBox>
+             <VBox maxWidth="1.7976931348623157E308" styleClass="profile-box">
+                 <Label fx:id="userName" styleClass="profile-box" text="User Name" />
+                 <Label fx:id="userType" styleClass="profile-box" text="Personal" />
+             </VBox>
+
+            <!-- Bloque 2: Navbar -->
+            <VBox styleClass="sidebar-nav" VBox.vgrow="ALWAYS">
+               <Button maxWidth="1.7976931348623157E308" onAction="#loadHome" styleClass="nav-button" text="Inicio" />
+               <Button maxWidth="1.7976931348623157E308" onAction="#loadProfile" styleClass="nav-button" text="Perfil" />
+               <!-- <Button maxWidth="1.7976931348623157E308" onAction="#loadCalendar" styleClass="nav-button" text="Calendario"/>
+               <Button maxWidth="1.7976931348623157E308" onAction="#loadSchedule" styleClass="nav-button" text="Horario"/>
+               <Button maxWidth="1.7976931348623157E308" onAction="#loadTasks" styleClass="nav-button" text="Tareas"/>
+               <Button maxWidth="1.7976931348623157E308" onAction="#loadFinance" styleClass="nav-button" text="Finanzas"/> -->
+            </VBox>
+
+            <!-- Bloque 3: Opciones -->
+            <VBox styleClass="sidebar-bottom">
+                <Button maxWidth="1.7976931348623157E308" fx:id="btnOptions" onAction="#toggleOptionsMenu" styleClass="nav-button" text="Opciones" />
+            </VBox>
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="contentArea" styleClass="content-area" />
+    </center>
+</BorderPane>

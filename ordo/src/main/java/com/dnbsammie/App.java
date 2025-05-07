@@ -14,8 +14,8 @@ public class App extends Application {
 
     @Override
     public void start(@SuppressWarnings("exports") Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
-        stage.getIcons().add(new Image(App.class.getResourceAsStream("/com/dnbsammie/icons/logo.png")));
+        scene = new Scene(loadFXML("MainView"));
+        stage.getIcons().add(new Image(App.class.getResourceAsStream("/com/dnbsammie/icons/icon.png")));
         stage.setScene(scene);
         stage.setTitle("Ordo");
         stage.show();
@@ -33,5 +33,4 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
-
 }
