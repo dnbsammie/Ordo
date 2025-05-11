@@ -21,9 +21,6 @@ jobs:
           java-version: '21'
           cache: 'maven'
 
-      - name: Move to the project folder
-        run: cd ordo
-
       - name: Build with Maven
         run: mvn -B package --file ordo/pom.xml
 
