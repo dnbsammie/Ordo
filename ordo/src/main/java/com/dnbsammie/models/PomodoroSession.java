@@ -31,18 +31,11 @@ public class PomodoroSession {
         isRunning = false;
     }
 
-    public int getPomodoroDuration() {
-        return pomodoroDuration;
-    }
-
-    public int getBreakDuration() {
-        return breakDuration;
-    }
-
-    public int getCurrentSessionTime() {
-        return currentSessionTime;
-    }
-
+    // @formatter:off
+    public int getPomodoroDuration() {return pomodoroDuration;}
+    public int getBreakDuration() {return breakDuration;}
+    public int getCurrentSessionTime() {return currentSessionTime;}
+    // @formatter:on
     public void startSession() {
         if (!isRunning) {
             this.isRunning = true;

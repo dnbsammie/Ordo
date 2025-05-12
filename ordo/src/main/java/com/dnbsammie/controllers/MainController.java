@@ -21,21 +21,13 @@ public class MainController {
         }
     }
 
-    @FXML
-    private void loadHome() {
-        loadScreen("Home.fxml");
-    }
-
-    @FXML
-    private void loadProfile() {
-        loadScreen("Profile.fxml");
-    }
-
-    @FXML
-    private void loadSettings() {
-        loadScreen("Settings.fxml");
-    }
-
+    // @formatter:off
+    @FXML private void loadHome() {loadScreen("Home.fxml");}
+    @FXML private void loadProfile() {loadScreen("Profile.fxml");}
+    @FXML private void loadCalendar() {loadScreen("Calendar.fxml");}
+    @FXML private void loadSchedule() {loadScreen("Schedule.fxml");}
+    @FXML private void loadSettings() {loadScreen("Settings.fxml");}
+    // @formatter:on
     @FXML
     private void toggleOptionsMenu() {
         System.out.println("Aquí iría el menú flotante de opciones (todavía no implementado)");
