@@ -13,7 +13,7 @@ public class App extends Application {
     private static Scene scene;
 
     @Override
-    public void start(@SuppressWarnings("exports") Stage stage) throws IOException {
+    public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("MainView"));
         stage.getIcons().add(new Image(App.class.getResourceAsStream("/com/dnbsammie/icons/icon.png")));
         stage.setScene(scene);
